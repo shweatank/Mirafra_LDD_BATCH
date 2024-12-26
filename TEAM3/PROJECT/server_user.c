@@ -1,12 +1,4 @@
-/*
- * NAME : PODDUTURI MANASA REDDY
- * KM_ID : KM54BESD03
- * DATE :
- * FILE_NAME :
- * SAMPLE_INPUT :
- * SAMPLE_OUTPUT :
- *
- * */
+
 
 #include <stdio.h>    // Standard I/O library
 #include <string.h>   // String handling functions
