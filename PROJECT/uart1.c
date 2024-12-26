@@ -126,5 +126,5 @@ module_init(uart_init);  // Specify the init function for module load
 module_exit(uart_exit);  // Specify the exit function for module unload
 
 MODULE_LICENSE("GPL");  // License type, used by the kernel
-MODULE_AUTHOR("Sujitha");  // Author of the module
+MODULE_AUTHOR("ashritha");  // Author of the module
 MODULE_DESCRIPTION("A Simple UART Driver Module");  // Short description of the module

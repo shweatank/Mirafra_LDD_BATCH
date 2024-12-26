@@ -154,7 +154,7 @@ module_exit(uart_driver_exit);
 
 // Module metadata
 MODULE_LICENSE("GPL");               // License of the module
-MODULE_AUTHOR("Prashant");           // Author information
+MODULE_AUTHOR("ashritha");           // Author information
 MODULE_DESCRIPTION("A simple UART device driver."); // Description of the module
 MODULE_VERSION("1.0");               // Module version
 
