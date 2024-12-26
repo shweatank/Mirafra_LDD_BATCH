@@ -1,4 +1,4 @@
-obj-m += basic_driver.o simple_driver1.o
+obj-m += basic_driver.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules

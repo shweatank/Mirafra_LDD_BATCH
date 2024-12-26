@@ -38,7 +38,7 @@ int main()
 				scanf(" %[^\n]s",s[i].log_message);
 				x=write(fd,&s[i].log_message,sizeof(struct log_msg));
 				y=read(fd,k_buffer,sizeof(k_buffer)-1);
-				printf("the num of bytes to read is %d\n",y);
+			//	printf("the num of bytes to read is %d\n",y);
 				k_buffer[y]='\0';
 				printf("the message read from kernel is : %s\n",k_buffer);
 				i=(i+1)%sizeof(max_size);
