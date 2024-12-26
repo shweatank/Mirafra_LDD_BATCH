@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/key_board_interrupt/socket_module1.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/tyr/ldd/key_board_interrupt/socket_module1.ko /home/tyr/ldd/key_board_interrupt/socket_module1.o /home/tyr/ldd/key_board_interrupt/socket_module1.mod.o

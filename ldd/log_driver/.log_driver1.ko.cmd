@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/log_driver/log_driver1.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/tyr/ldd/log_driver/log_driver1.ko /home/tyr/ldd/log_driver/log_driver1.o /home/tyr/ldd/log_driver/log_driver1.mod.o

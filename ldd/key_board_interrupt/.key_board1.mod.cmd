@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/key_board_interrupt/key_board1.mod := printf '%s\n'   key_board1.o | awk '!x[$$0]++ { print("/home/tyr/ldd/key_board_interrupt/"$$0) }' > /home/tyr/ldd/key_board_interrupt/key_board1.mod

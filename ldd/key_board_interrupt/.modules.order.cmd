@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/key_board_interrupt/modules.order := {   echo /home/tyr/ldd/key_board_interrupt/socket_module1.o;   echo /home/tyr/ldd/key_board_interrupt/key_board1.o; :; } > /home/tyr/ldd/key_board_interrupt/modules.order

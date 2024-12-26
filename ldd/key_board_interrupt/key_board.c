@@ -6,14 +6,23 @@
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/interrupt.h>
-
+#include"master.c"
 /*  IRQ number for the keyboard  */
 #define KEYBOARD_IRQ 1
+static char buf[100];
 
 /*  Interrupt handler function */
 static irqreturn_t irq_handler(int irq, void *dev_id)
 {
-    printk(KERN_INFO "Keyboard interrupt received!\n");
+    pr_info("Keyboard interrupt received  %d !\n",irq);
+    int ret=read(new_socket,buf,sizeof(buf));
+    if(ret>0)
+    {
+	    fgets(response, sizeof(response), stdin);
+            response[strcspn(response, "\n")] = 0; // Remove newline character
+            send(new_socket, response, strlen(response), 0);
+            memset(buffer, 0, buffer_size);
+    }
     return IRQ_HANDLED; /* Successfully handled the interrupt  */
 }
 

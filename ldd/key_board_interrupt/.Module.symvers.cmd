@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/key_board_interrupt/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/tyr/ldd/key_board_interrupt/Module.symvers -T /home/tyr/ldd/key_board_interrupt/modules.order -i Module.symvers -e 

@@ -2,39 +2,42 @@
 #include <linux/netdevice.h>
 /* header file in the Linux kernel provides definitions, structures, and functions for network device drivers. It is a fundamental part of the Linux networking subsystem and is used to manage network interfaces, implement drivers, and interact with network devices */
 #include <linux/etherdevice.h>
+/*  header file is a part of the Linux kernel source and provides helper functions, macros, and utilities for working with Ethernet network devices in kernel space  */
 #include <linux/skbuff.h>
 
-// Custom net_device_ops function declarations
+/* Custom net_device_ops function declarations   */
 static int mynet_open(struct net_device *dev);
 static int mynet_stop(struct net_device *dev);
 static netdev_tx_t mynet_start_xmit(struct sk_buff *skb, struct net_device *dev);
 
-// Define net_device_ops structure
+/* Define net_device_ops structure   */
 static const struct net_device_ops mynet_netdev_ops = {
     .ndo_open = mynet_open,
     .ndo_stop = mynet_stop,
     .ndo_start_xmit = mynet_start_xmit,
 };
 
-// Open function
+/* Open function  */
 static int mynet_open(struct net_device *dev) {
-    netif_start_queue(dev); // Start the transmit queue
+    netif_start_queue(dev); /* Start the transmit queue  */
     pr_info("device has be opened you can send the data \n");
     return 0;
 }
 
-// Stop function
+/* Stop function    */
 static int mynet_stop(struct net_device *dev) {
     netif_stop_queue(dev); // Stop the transmit queue
     pr_info("device has been closed\n");
     return 0;
 }
 
-// Transmit function
+/* Transmit function   */
 static netdev_tx_t mynet_start_xmit(struct sk_buff *skb, struct net_device *dev) {
     pr_info("transmitting the packet \n");
     dev_kfree_skb(skb); // Free the socket buffer
     return NETDEV_TX_OK;
+    /*NETDEV_TX_OK: Indicates the packet was successfully queued for transmission.
+NETDEV_TX_BUSY: Indicates the transmission queue is full or unable to process the packet*/
 }
 
 // Init function

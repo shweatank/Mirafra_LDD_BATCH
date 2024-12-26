@@ -1,0 +1,1 @@
+savedcmd_/home/tyr/ldd/key_board_interrupt/socket_module1.mod := printf '%s\n'   socket_module1.o | awk '!x[$$0]++ { print("/home/tyr/ldd/key_board_interrupt/"$$0) }' > /home/tyr/ldd/key_board_interrupt/socket_module1.mod
