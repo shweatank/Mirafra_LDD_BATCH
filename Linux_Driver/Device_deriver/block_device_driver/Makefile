@@ -1,4 +1,4 @@
-obj-m := block_device.o
+obj-m := block_device1.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
