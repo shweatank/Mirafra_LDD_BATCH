@@ -1,0 +1,10 @@
+
+/ {
+    compatible = "brcm,bcm2835";
+    gpio {
+        compatible = "gpio-leds";
+        gpios = <&gpio 27 0>;
+    };
+};
+
+

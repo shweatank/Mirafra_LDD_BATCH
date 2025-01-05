@@ -1,0 +1,18 @@
+/dts-v1/;//version  Specifies the version of the Device Tree syntax being used (version 1 in this case). 
+/plugin/;//hot plugin  Overlays are used to add or modify hardware configurations dynamically, without modifying the base Device Tree.
+
+/{
+// '/':Represents the root node of the Device Tree. It is the top-level container for all the device definitions.
+    compatible = "brcm,bcm2835";//device board name Declares that this overlay is compatible with the Broadcom BCM2835 chip.
+    fragment@0 {//A fragment is a section of the overlay that targets a specific part of the hardware configuration.
+				//The @0 is just a label and can be any unique identifier.
+        target = <&gpio>;//giving as gpio Specifies the target node in the base Device Tree to modify.
+        _overlay_ {//overlay consists of all dts files
+            gpio_led: gpio_led //declares a new name for gpio
+			{
+                gpios = <&gpio 27 0>; // GPIO 17 is used for the LED
+            };
+        };
+    };
+};
+
