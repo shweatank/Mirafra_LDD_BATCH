@@ -159,5 +159,5 @@ module_init(uart_dma_init);
 module_exit(uart_dma_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Kanna");
-MODULE_DESCRIPTION("Enhanced UART DMA Driver Example for Raspberry Pi 4 with Debugging");
+MODULE_AUTHOR("team2");
+MODULE_DESCRIPTION("UART DMA Driver for Raspberry Pi 4");
