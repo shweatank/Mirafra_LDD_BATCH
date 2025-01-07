@@ -1,0 +1,19 @@
+//steps to install wiringPi
+
+git clone https://github.com/WiringPi/WiringPi.git
+cd WiringPi
+
+# build the package
+./build debian
+mv debian-template/wiringpi_3.10_arm64.deb .
+# install it
+sudo apt install ./wiringpi_3.10_arm64.deb
+
+---------------------------------------- 
+ gcc -o uart uart.c -lwiringPi
+ sudo ./uart
+
+
+to enalble serial communication 
+sudo raspi-config 
+
