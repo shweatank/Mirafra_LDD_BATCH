@@ -1,0 +1,2 @@
+echo "Hello, Block Device!" | sudo dd of=/dev/testblk bs=512 count=1 //to send data to device of-->output file
+sudo dd if=/dev/testblk bs=512 count=1 //to see data if-->input file
