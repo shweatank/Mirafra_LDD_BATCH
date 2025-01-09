@@ -7,4 +7,4 @@ gcc i2s_user.c
 ./a.out audio.wav
 dmesg
 sudo rmmod file_name.ko
-
+sox --i audio.wav // to see file info
