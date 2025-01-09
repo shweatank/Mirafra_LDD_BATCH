@@ -1,0 +1,10 @@
+make
+sox -n audio.wav synth 10 sin 410000
+sudo insmod file_name.ko
+sudo mknod /dev/i2s_audio c 234 0
+sudo chmod 777 /dev/i2s_audio
+gcc i2s_user.c
+./a.out audio.wav
+dmesg
+sudo rmmod file_name.ko
+
