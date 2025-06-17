@@ -33,7 +33,8 @@ int push(int num,int *top)
 {
 	if((*top)==SIZE-1)
 		printf("full\n");
-	else{
+	else
+	{
 	(*top)++;
 	s[*top]=num;
 	printf("pushed");
@@ -43,10 +44,11 @@ int pop(int *top)
 {
 	if((*top)==-1)
 		printf("no elements\n");
-	else{
+	else
+	{
 		(*top)--;
 		printf("poped\n");
-}
+	}
 }
 void print(int s[],int *top)
 {

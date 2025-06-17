@@ -8,14 +8,16 @@ typedef struct student
 stu* createlist();
 stu* createnode();
 void traverse(stu*);
-void loop(stu*);
+stu* insertnode(stu *H, int);
 int main()
 {
 	stu *h=NULL, *n=NULL, *l=NULL;
-	h=createlist();
+	h=createlist();int p;
 	traverse(h);
-	loop(h);
-
+	printf("enter position to insert:\n");
+	scanf("%d",&p);
+	h=insertnode(h,p);
+	traverse(h);
 }
 stu* createlist()
 {
@@ -51,31 +53,16 @@ void traverse(stu *T)
 		T=T->next;
 	}
 }
-void loop(stu *h)
+stu* insertnode(stu *H, int p)
 {
-	stu *p=NULL,*q=NULL;
-	p=q=h;
-	while(p)
+	stu *T=H;int i=1;
+	while(i<p-1)
 	{
-		p=p->next;
-		if(p)
-			p=p->next;
-		q=q->next;
-		if(p==q)
-			printf("loop exist\n");
+		T=T->next;
+		i++;
 	}
-	if(p==NULL) printf("no loop\n");
-	if(p==q)
-	{
-		printf("loop overcome\n");
-		p=h;
-		while(p!=q)
-		{
-			r=q;
-			q=q->next;
-			p=p->next;
-		}
-		r->next=NULL;
-	}
+	stu *N=createnode();
+	N->next=T->next;
+	T->next=N;
+	return H;
 }
-
